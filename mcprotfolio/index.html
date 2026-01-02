@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aya | portfolio</title>
+    <link rel="icon" type="image" href="./assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="particles-js"></div>
+    <div id="box">
+        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay: 1700ms;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1800ms;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1900ms;"></div>
+        <div class="box2 animated bounceOutRight" style="animation-delay: 1900ms;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1800ms;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1700ms;"></div>
+    </div>
+    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay: 1000ms;">about</a>
+    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay: 1000ms;">work</a>
+    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay: 1000ms;">contact</a>
+    <a id="projects" onclick="showprojects()" class="animated fadeIn" style="animation-delay: 1000ms;">projects</a>
+    <div id="middle" class="animated slideInDown" style="animation-delay: 2000ms;">
+        <h1>Aya.</h1>
+        <h2>Plugin Developer / Configurator</h2>
+        <div id="menu">
+            <a onclick="showabout()">about</a>
+            <a onclick="showwork()">work</a>
+            <a onclick="showcontact()">contact</a>
+            <a onclick="showprojects()">projects</a>
+        </div>
+        <table>
+            <tr>
+                <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social"
+                        href="discord://-/users/784759954262327297"><i class="fab fa-discord"></i></a></td>
+                <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social"
+                        href="https://github.com/tal5"><i class="fab fa-github"></i></a></td>
+            </tr>
+        </table>
+    </div>
+    <div id="projects_container" class="container">
+        <div onclick="closeprojects()"><i class="fas fa-angle-right"></i></div>
+        <h1>projects.</h1>
+        <section>
+            <h2>my work</h2>
+            <p>
+                Here are some of the projects I've worked on recently. Feel free to explore:
+            </p>
+            <ul>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>Denizen</h3>
+                        <p>A scripting language and engine for Paper servers, allowing both quick and easy customization (due to functions like hot reloading) and creation of large scale projects.
+                            Due to the project's scale, this has made me familiar with many areas of Minecraft and its codebase.
+                        </p>
+                        <button class="btn_one"><a
+                                href="https://github.com/DenizenScript/Denizen"
+                                style="color: inherit; text-decoration: none"> View Project </a></button>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>Clientizen</h3>
+                        <p>A client-side mod written using the Fabric API and mod loader.
+                            Allows receving scripts and sets of customizations from the server as DenizenScript scripts, and applying them client-side.
+                            This allows custom GUIs, full control of client-side features, advanced text and rendering detections, and much more, opening up previously inaccessible modding options.
+                        </p>
+                        <button class="btn_one"><a href="https://github.com/DenizenScript/Clientizen"
+                                style="color: inherit; text-decoration: none"> View Project </a></button>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>Paper</h3>
+                        <p>Paper is the biggest and most widely used server software for Minecraft (your server is probably using it/a fork of it right now!).
+                            I have made several contributions to Paper over the years, showing my understanding of both plugin development and the API itself.
+                        </p>
+                        <button class="btn_one"><a href="https://github.com/PaperMC/Paper/issues?q=is%3Apr%20author%3A%40me"
+                                style="color: inherit; text-decoration: none"> View Project </a></button>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>Adventure</h3>
+                        <p>Adventure is a set of APIs for UI and backend Minecraft development, supporting everything from text components to raw NBT data.
+                            It's implemented by many of the biggest Minecraft server APIs, and I have made several contributions there as well, mainly to the NBT and text component APIs.
+                        </p>
+                        <button class="btn_one"><a href="https://github.com/PaperMC/adventure/issues?q=is%3Apr%20author%3A%40me"
+                                style="color: inherit; text-decoration: none"> View Project </a></button>
+                    </div>
+                </div>
+            </ul>
+        </section>
+    </div>
+    <div id="work_container" class="container">
+        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+        <h1>work.</h1>
+        <section>
+            <ul>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>NMS</h3>
+                        <p>NMS (net.minecraft.server) refers to a Minecraft server's internals, I.e. Mojang's code.
+                            It is often used for more advanced modding functionality that isn't provided by traditional APIs.
+                            I have had extensive experience working with many areas of NMS over the years, see some examples below:
+                        </p>
+                        <button class="btn_one"><a
+                                href="https://github.com/DenizenScript/Denizen/commit/c0dfae0d3682e90ff2ab1f490d1410bb3bc04dea#diff-9fe91b8dd0590bdf273c1e1769c3de2498545f5562f5427f0910d6cee68404ae"
+                                style="color: inherit; text-decoration: none"> Persisting Item Data via Components </a></button>
+                        <button class="btn_one"><a
+                                href="https://github.com/DenizenScript/Denizen/blob/e001ec2fa91cd120f4802b1e4ca487079bbe7759/v1_21/src/main/java/com/denizenscript/denizen/nms/v1_21/impl/BiomeNMSImpl.java"
+                                style="color: inherit; text-decoration: none"> Editing Biome Data via NMS </a></button>
+                        <button class="btn_one"><a
+                                href="https://github.com/DenizenScript/Denizen/commit/9897530e77ffc240b7f408d8ed246e037b0b45d9"
+                                style="color: inherit; text-decoration: none"> Editing Internal Entity Data via NMS </a></button>
+                        <button class="btn_one"><a
+                                href="https://github.com/DenizenScript/Denizen/commit/d6b13873d6a527250410faf00c63dc47ddac1e0b"
+                                style="color: inherit; text-decoration: none"> Overriding Block Tags via NMS </a></button>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>NBT</h3>
+                        <p>NBT is the file & data format used by Minecraft to save various forms of data, and is often used for certain advanced forms of modding, reading offline data, and certain optimizations.
+                            I have worked with NBT many times, giving me lots of familiarity with the format and relevant libraries.
+                        </p>
+                        <button class="btn_one"><a href="https://github.com/DenizenScript/Denizen/commit/bf9c57654485c656dc7f8be337529e741d20b275"
+                                style="color: inherit; text-decoration: none"> Controlling The "custom_data" Component </a></button>
+                        <button class="btn_one"><a href="https://github.com/DenizenScript/Denizen/commit/edd3f1326f14e4fef6d96a679eaa93d05346f399"
+                                style="color: inherit; text-decoration: none"> Adapting a Codebase from JNBT to Adventure NBT </a></button>
+                        <button class="btn_one"><a href="https://github.com/PaperMC/adventure/issues?q=is%3Apr%20author%3A%40me"
+                                style="color: inherit; text-decoration: none"> My PRs to Adventure NBT (see projects) </a></button>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>Packets</h3>
+                        <p>Packets are the actual bits of data sent back and forth by the Minecraft client and server.
+                            Manipulating them is often done for more finite control over data the server wouldn't normally accept,
+                            optimizations that may come from modding at the packet level, or intercepting certain events that wouldn't be detectable otherwise.
+                        </p>
+                        <button class="btn_one"><a href="https://github.com/DenizenScript/Denizen/commit/e1dd239bd7e788d98b7fcf12509c64049e9e167f"
+                                style="color: inherit; text-decoration: none"> An Event-Like Packet Interception System </a></button>
+                        <button class="btn_one"><a href="https://github.com/DenizenScript/Denizen/commit/0f42e74327d9fa1339b3b51f12a2457dbc6cb64b"
+                                style="color: inherit; text-decoration: none"> Async Entity Data Packets For Beyond-Tickrate Modifications </a></button>
+                        <button class="btn_one"><a href="https://github.com/DenizenScript/Denizen/commit/8976f3fab6b9d80dfc48877633136aa2d362c942"
+                                style="color: inherit; text-decoration: none"> Entity Metadata Edits via Packets </a></button>
+                        <button class="btn_one"><a href="https://github.com/DenizenScript/Denizen/commit/c6212e41368359824bbe499ab1f309148676200a"
+                                style="color: inherit; text-decoration: none"> Force Refreshing Clients via Packets </a></button>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>Reflection</h3>
+                        <p>"Reflection" refers to a set of Java APIs used to dynamically access internal Java constructs (fields, methods, classes, etc.) at runtime.
+                            It's often used in Minecraft modding to write more dynamic code, access parts of NMS that are normally restricted, and much much more.
+                        </p>
+                        <button class="btn_one"><a href="https://github.com/DenizenScript/Denizen-Core/commit/b2619ad7b152e60542b75a1dfb7534705a131328"
+                                style="color: inherit; text-decoration: none"> Optimizing Field Access via "MethodHandle"s </a></button>
+                        <button class="btn_one"><a href="https://github.com/DenizenScript/Denizen-Core/commit/6a8cc6e2439842e67d74f8898e4b198a6c88f87c"
+                                style="color: inherit; text-decoration: none"> Getting the Caller Method via "StackWalker" </a></button>
+                        <button class="btn_one"><a href="https://github.com/DenizenScript/Denizen-Core/commit/f0bcc63126afa4e9a0bfa025a357419e72c87a47"
+                                style="color: inherit; text-decoration: none"> Working Around Paper's Runtime Remapping </a></button>
+                    </div>
+                </div>
+            </ul>
+            <p>Note: The links in this page are just hand-picked examples, if what you're interested in isn't shown here it doesn't necessarily mean I am not familiar with it; please contant me!</p>
+        </section>
+    </div>
+    <div id="about_container" class="container">
+        <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+        <h1>about.</h1>
+        <section>
+            <h2>about me</h2>
+            <p>
+                Hello! I'm Aya, a professional self-taught developer based in the EU.
+                I have been playing Minecraft for over a decade, and programming for most of it.
+            </p>
+            <p>
+                I have worked on projects involving many different areas of Minecraft and its codebase, utilizing platforms and APIs like Paper and Fabric.
+                Overall, this has given me a good amount of experience working with different parts of Minecraft modding and within different enviorments.
+                While my specialization is back-end related development (so user data storage or a kits system rather than 3d models and particle effects), I can approach both back and front end work if needed.
+            </p>
+            <p>
+                Feel free to explore the rest of this portfolio and see examples and references for my work.
+                If you are interested in hiring or a comission, contact me!
+            </p>
+
+        </section>
+    </div>
+    <div id="contact_container" class="container">
+        <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+        <h1>contact.</h1>
+        <section>
+            <h2>contact me</h2>
+            <p>
+            <form action="https://formcarry.com/s/zHk6L_-oBvu" method="POST" enctype="multipart/form-data" class="formcarry-form">
+                <input name="name" type="text" placeholder="name" required />
+                <input name="email" type="email" placeholder="email" required /><br>
+                <textarea name="message" placeholder="your message" required rows="5"></textarea><br>
+                <button class="btn_one">send</button>
+            </form>
+            </p>
+        </section>
+    </div>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
